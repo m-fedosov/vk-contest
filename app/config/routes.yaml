@@ -1,0 +1,28 @@
+controllers:
+    resource:
+        path: ../src/Controller/
+        namespace: App\Controller
+    type: attribute
+
+api_login_check:
+    path: /api/login_check
+
+api_comment_create:
+    path: /comment
+    methods: [POST]
+    controller: App\Controller\Api\CommentController::createComment
+
+api_comment_edit:
+    path: /comment/{id}
+    methods: [PUT]
+    controller: App\Controller\Api\CommentController::updateComment
+
+api_comment_get:
+    path: /comment/{id}
+    methods: [GET]
+    controller: App\Controller\Api\CommentController::getComment
+
+api_comment_delete:
+    path: /comment/{id}
+    methods: [DELETE]
+    controller: App\Controller\Api\CommentController::deleteComment
